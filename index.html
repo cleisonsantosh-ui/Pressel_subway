@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Subway Bet - Verificação de Idade</title>
+    <meta name="description" content="Verifique sua idade para acessar o jogo Subway Surfers Bet.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="sulf.jpg" class="bg-image" alt="Background">
+
+    <main class="main-container">
+        <section class="age-card" id="age-verification">
+            <div class="logo-container">
+                <!-- Replace with your logo -->
+                <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 0;">SUBWAY<span style="color: #fff;">BET</span></h1>
+            </div>
+            
+            <h1>CONTROLE DE ACESSO</h1>
+            <p>Você tem mais de 18 anos de idade para acessar esta plataforma?</p>
+
+            <div class="button-group">
+                <button class="btn btn-yes" id="btn-yes" onclick="handleVerification(true)">SIM, SOU MAIOR DE 18</button>
+                <button class="btn btn-no" id="btn-no" onclick="handleVerification(false)">NÃO TENHO 18 ANOS</button>
+            </div>
+
+            <div class="trust-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                Ambiente 100% Seguro e Criptografado
+            </div>
+        </section>
+
+        <!-- Mensagem de Pena (Oculta por padrão) -->
+        <section class="age-card" id="denied-message" style="display: none;">
+            <div class="logo-container">
+                <h1 style="color: #ff3d00; font-size: 4rem;">🚫</h1>
+            </div>
+            <h1>QUE PENA!</h1>
+            <p>Infelizmente, este jogo é exclusivo para maiores de 18 anos. Volte quando você tiver a idade permitida!</p>
+            <div class="button-group">
+                <button class="btn btn-no" onclick="location.reload()">VOLTAR</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
